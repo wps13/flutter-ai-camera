@@ -1,17 +1,12 @@
 # ai_camera
 
-A new Flutter project.
+Flutter project to use images, detect which ingredients are present and generate a food recipe, using IA (Google Gemini) to process the image.
 
-## Getting Started
+## Results
 
-This project is a starting point for a Flutter application.
+Processing images from gallery on emulators:
 
-A few resources to get you started if this is your first Flutter project:
+| Android | iOS (multiple ingredients)| iOS (single ingredient)|
+|-------|--------|------|
+|<img width="1080" height="2400" alt="Screenshot_20261010_172918" src="https://github.com/user-attachments/assets/95d27031-4c3d-4898-b7b9-63b09a822333" />| <img width="1206" height="2622" alt="Simulator Screenshot - iPhone 17 - 2026-10-10 at 17 11 34" src="https://github.com/user-attachments/assets/289c10ab-569a-4468-9418-fbd5f2d8a9a8" />|<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 17 - 2026-10-10 at 17 05 30" src="https://github.com/user-attachments/assets/d9ca42f9-5dd3-4fe9-8398-bbeb76b6b692" /> |
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
