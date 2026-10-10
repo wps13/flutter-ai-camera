@@ -5,9 +5,10 @@ import 'package:image_picker/image_picker.dart';
 class ImageAnalyzer {
   final GenerativeModel _model;
   ImageAnalyzer()
-    : _model = FirebaseAI.googleAI().generativeModel(
-        model: 'gemini-2.5-flash', // Free tier, multimodal, fast
-      );
+    : _model = FirebaseAI.googleAI(useLimitedUseAppCheckTokens: true)
+          .generativeModel(
+            model: 'gemini-3.8-flash', // Free tier, multimodal, fast
+          );
 
   /// Analyze an image with a custom prompt
   Future<String> analyze({

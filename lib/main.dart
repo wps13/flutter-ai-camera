@@ -1,13 +1,20 @@
 import 'dart:io';
 
 import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'package:firebase_app_check/firebase_app_check.dart';
 import 'package:flutter/material.dart';
 
 import 'ai_image_service.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await FirebaseAppCheck.instance.activate(
+    // debug config, needs to be updated to prod
+    providerAndroid: AndroidDebugProvider(),
+    providerApple: AppleDebugProvider(),
+  );
   runApp(const MyApp());
 }
 
@@ -55,8 +62,7 @@ class _ImageAnalyzerScreenState extends State<ImageAnalyzerScreen> {
   bool _isAnalyzing = false;
   // Change this prompt for different use cases
   final String _prompt = '''
-Analyze this image and identify which food are present, the goal is to suggest
-a recipe using them, to be cooked in maximum of 30 minutos.
+Analise esta imagem e identifique quais alimentos estão presentes; o objetivo é sugerir uma receita que os utilize, para ser preparada em no máximo 30 minutos.
 ''';
   Future<void> _analyzeFromCamera() async {
     final image = await _analyzer.pickImage(fromCamera: true);

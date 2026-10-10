@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "522465777794",
+    "project_id": "will-flutter-camera",
+    "storage_bucket": "will-flutter-camera.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522465777794:android:2f65389ad2af033ecbbc9b",
+        "android_client_info": {
+          "package_name": "com.example.ai_camera"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwO8BJ9mrb89tvSJZrCYodLpdlj3s4rNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
